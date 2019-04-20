@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="UI.MainController">
+    <Tab>
+        <VBox alignment="TOP_CENTER">
+            <Label text="Cars:">
+                <font>
+                    <Font name="System Bold" size="16.0"/>
+                </font>
+            </Label>
+            <HBox alignment="CENTER">
+                <TableView fx:id="tableViewCars" editable="true" prefHeight="400.0" prefWidth="481.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnIdCar" text="ID">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="id"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tableColumnModelCar" prefWidth="128.00003051757812" text="Car model">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="model"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tableColumnKmBuyCar" prefWidth="89.99996948242188" text="Km Buy">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="kmBuy"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tableColumnPricePerDayCar" prefWidth="94.0" text="Price Per Day">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="pricePerDay"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="482.0">
+                <Button onAction="#btnAddCarClick" text="Add car"/>
+                <!--<Button onAction="#btnUpdateCarClick" text="Update car"/>-->
+                <!--<Button onAction="#btnCarDeleteClick" text="Delete car"/>-->
+                <!--<Button onAction="#btnCarUndoClick" text="Undo car operation" />-->
+                <!--<Button onAction="#btnCarRedoClick" text="Redo car operation" />-->
+
+            </HBox>
+        </VBox>
+        <graphic>
+            <Label text="Cars"/>
+        </graphic>
+    </Tab>
+
+    <Tab>
+        <graphic>
+            <Label text="Rents"/>
+        </graphic>
+        <VBox alignment="TOP_CENTER" prefHeight="964.0" prefWidth="500">
+            <Label text="Transactions:">
+                <font>
+                    <Font name="System Bold" size="16.0"/>
+                </font>
+            </Label>
+            <HBox alignment="CENTER">
+                <TableView fx:id="tableViewRents" editable="true" prefHeight="400.0" prefWidth="1200.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnIdRent" text="ID">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="id"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tableColumnCarIdRent" text="Car id">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="carId"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tableColumnDaysRent" text="Days">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="days"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="tableColumnTraveledKmRent" prefWidth="118.0" text="Traveled Km">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="traveledKm"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                <Button onAction="#btnAddRentClick" text="Add Transaction"/>
+                <!--<Button onAction="#btnUpdateTransactionClick" text="Update Transaction"/>-->
+                <!--<Button onAction="#btnDeleteTransactionClick" text="Delete Transaction"/>-->
+                <!--<Button onAction="#btnTransactionUndoClick" text="Undo Transaction operation" />-->
+                <!--<Button onAction="#btnTransactionRedoClick" text="Redo Transaction operation" />-->
+            </HBox>
+        </VBox>
+    </Tab>
+    <Tab>
+        <graphic>
+            <Label text="Other functionalities"/>
+        </graphic>
+        <VBox alignment="TOP_CENTER" prefHeight="964.0" prefWidth="592.0">
+            <Pane prefHeight="60.0" prefWidth="696.0"/>
+            <Button onAction="#IdToKm" text="Id ti Km search"/>
+            <!--<Pane prefHeight="60.0" prefWidth="800.0"/>-->
+            <!--<Button onAction="#transactionByPrice" text="Transaction in price interval"/>-->
+            <!--&lt;!&ndash;<Pane prefHeight="60.0" prefWidth="696.0"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button onAction="#moviesByBookings" text="Show movies by number of bookings"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Pane prefHeight="60.0" prefWidth="696.0"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button onAction="#cardsByBonusPoints" text="Show Customer Cards by Bonus Points"/>&ndash;&gt;-->
+            <!--<Pane prefHeight="60.0" prefWidth="696.0"/>-->
+            <!--<Button onAction="#deleteTransactionBetweenTwoDates" text="Delete all Transactions from a period"/>-->
+            <!--&lt;!&ndash;<Pane prefHeight="60.0" prefWidth="696.0"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button onAction="#extraBonusPoints" text="Extra Bonus Points"/>&ndash;&gt;-->
+        </VBox>
+    </Tab>
+</TabPane>

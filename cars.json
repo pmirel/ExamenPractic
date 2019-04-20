@@ -1,0 +1,5 @@
+{"model":"bmw","kmBuy":120,"pricePerDay":25,"id":"1"}
+{"model":"vw","kmBuy":100,"pricePerDay":75,"id":"2"}
+{"model":"opel","kmBuy":150,"pricePerDay":80,"id":"3"}
+{"model":"subaru","kmBuy":160,"pricePerDay":20,"id":"4"}
+{"model":"bmw","kmBuy":170,"pricePerDay":30,"id":"5"}
